@@ -9,7 +9,7 @@ import traceback
 import uuid
 from datetime import datetime
 from enum import Enum, IntEnum
-from typing import Any, TextIO, Optional
+from typing import Any, List, TextIO, Optional
 
 
 class MessageType(str, Enum):
@@ -210,7 +210,7 @@ class Logger:
         data: Any,
         type_: str = MessageType.MESSAGE,
         prio: MessagePrio = MessagePrio.INFO,
-        tags: Optional[list[str]] = None,
+        tags: Optional[List[str]] = None,
     ) -> None:
         msg = {
             "type": type_,
@@ -226,7 +226,7 @@ class Logger:
         data: Any,
         type_: str = MessageType.MESSAGE,
         prio: MessagePrio = MessagePrio.INFO,
-        tags: Optional[list[str]] = None,
+        tags: Optional[List[str]] = None,
     ) -> None:
         msg = {
             "type": type_,
@@ -237,25 +237,25 @@ class Logger:
             msg["tags"] = tags
         self._log(msg, 3)
 
-    def log_trace(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_trace(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.TRACE, tags)
 
-    def log_debug(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_debug(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.DEBUG, tags)
 
-    def log_info(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_info(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.INFO, tags)
 
-    def log_notice(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_notice(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.NOTICE, tags)
 
-    def log_warning(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_warning(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.WARNING, tags)
 
-    def log_error(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_error(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.ERROR, tags)
 
-    def log_critical(self, data: Any, tags: Optional[list[str]] = None) -> None:
+    def log_critical(self, data: Any, tags: Optional[List[str]] = None) -> None:
         self._log_msg(data, MessageType.MESSAGE, MessagePrio.CRITICAL, tags)
 
 
