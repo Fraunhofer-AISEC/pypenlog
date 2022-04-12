@@ -275,15 +275,15 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.
 
 [[package]]
 name = "python-lsp-black"
-version = "1.1.0"
+version = "1.2.0"
 description = "Black plugin for the Python LSP Server"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
-black = ">=19.3b0"
-python-lsp-server = "*"
+black = ">=22.1.0"
+python-lsp-server = ">=1.4.0"
 toml = "*"
 
 [package.extras]
@@ -376,7 +376,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "dcb53ba8d0febe10f9e52c111ae2f77c799b6b732060feb39242b19847c4f402"
+content-hash = "d09877218631ba22235b56c2e029c9ae9bc1e1ed7fd6b6203dd38cf21280d2ad"
 
 [metadata.files]
 atomicwrites = [
@@ -514,8 +514,8 @@ pytest = [
     {file = "pytest-7.1.1.tar.gz", hash = "sha256:841132caef6b1ad17a9afde46dc4f6cfa59a05f9555aae5151f73bdf2820ca63"},
 ]
 python-lsp-black = [
-    {file = "python-lsp-black-1.1.0.tar.gz", hash = "sha256:4f665aca0fd1611f9e2a4c1ea09de8809810bbe5013eeee5dfb8796c90a12d4c"},
-    {file = "python_lsp_black-1.1.0-py3-none-any.whl", hash = "sha256:1d2a9eb1f46c28cb994b22bfd1463a90d4779ad314d12db65d91940b0f1bd137"},
+    {file = "python-lsp-black-1.2.0.tar.gz", hash = "sha256:135ed1af3a14463cf5b6bb5fff4f95c6da5a030e9192ab042ca63febcb0af9d4"},
+    {file = "python_lsp_black-1.2.0-py3-none-any.whl", hash = "sha256:db96cf962685f33c6e026e67050c4a2f9ae8a970dd4b21e144d0c716d069044c"},
 ]
 python-lsp-jsonrpc = [
     {file = "python-lsp-jsonrpc-1.0.0.tar.gz", hash = "sha256:7bec170733db628d3506ea3a5288ff76aa33c70215ed223abdb0d95e957660bd"},
